@@ -1,0 +1,8 @@
+{
+  "name": "Pizza Pino Online Ordering",
+  "description": "Online ordering, live oven order tracking, pickup scheduling, and loyalty app for Pizza Pino stone-baked pizzas, calzones, burgers, wraps, and shakes, with seamless real-time POS queue synchronization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

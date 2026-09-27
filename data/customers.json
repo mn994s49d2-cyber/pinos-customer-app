@@ -1,0 +1,67 @@
+[
+  {
+    "id": "cust-oliver-talbot",
+    "name": "Oliver T.",
+    "email": "oliver.talbot2406@gmail.com",
+    "phone": "07700 900123",
+    "passwordHash": "password123",
+    "memberId": "PINO-88392",
+    "createdAt": "2026-09-12T23:44:33.786Z",
+    "loyalty": {
+      "customerName": "Oliver T.",
+      "points": 180,
+      "lifetimePoints": 280,
+      "tier": "Silver Crust",
+      "tierProgress": 45,
+      "memberId": "PINO-88392",
+      "unlockedRewards": [
+        "reward-dip"
+      ],
+      "history": [
+        {
+          "id": "hist-1",
+          "desc": "🎉 Welcome to Pizza Pino Club (+100 Bonus Pino Points)",
+          "points": 100,
+          "date": "1 week ago",
+          "type": "earn"
+        },
+        {
+          "id": "hist-2",
+          "desc": "Stone-Baked 12\" Margherita & Garlic Bread Order #A-98",
+          "points": 80,
+          "date": "Yesterday",
+          "type": "earn"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cust-1789861491575-268",
+    "name": "Sarah Jenkins",
+    "email": "sarah.j@example.com",
+    "phone": "07111222333",
+    "passwordHash": "password123",
+    "memberId": "PINO-96688",
+    "createdAt": "2026-09-19T23:44:51.575Z",
+    "loyalty": {
+      "customerName": "Sarah Jenkins",
+      "points": 100,
+      "lifetimePoints": 100,
+      "tier": "Bronze Slice",
+      "tierProgress": 50,
+      "memberId": "PINO-96688",
+      "unlockedRewards": [
+        "reward-dip"
+      ],
+      "history": [
+        {
+          "id": "hist-1789861491575",
+          "desc": "🎉 Welcome to Pizza Pino Club (+100 Free Welcome Pino Points)",
+          "points": 100,
+          "date": "Just now",
+          "type": "earn"
+        }
+      ]
+    }
+  }
+]

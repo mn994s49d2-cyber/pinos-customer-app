@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Custom scrollbar matching POS style */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(160, 160, 160, 0.25);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(160, 160, 160, 0.4);
+  }
+}
+
+/* Subtle, distinctive pulse animation for Active Order Tracking button */
+@keyframes live-status-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.6);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(220, 38, 38, 0);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes live-status-ready {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+    transform: scale(1.03);
+  }
+}
+
+.live-pulse-preparing {
+  animation: live-status-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.live-pulse-ready {
+  animation: live-status-ready 1.6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Print Styles for ESC/POS 80mm thermal receipts and standard print */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-receipt,
+  #printable-receipt * {
+    visibility: visible;
+  }
+  #printable-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm !important;
+    max-width: 100% !important;
+    padding: 2mm !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: white !important;
+    color: black !important;
+  }
+  @page {
+    margin: 0;
+    size: auto;
+  }
+}
